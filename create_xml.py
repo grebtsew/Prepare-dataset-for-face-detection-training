@@ -22,22 +22,22 @@ def create_training_xml(folder,
                         segmented,
                         detected_objects_array,
                         result_folder):
- 
+
  #folder = "" str path to image file folder
  #filename = "" str image filename
  #path = "" str image full path
  #database = "" database "unknown"
  #width = "" image width
  #height = "" image height
- #depth = "" 
+ #depth = ""
  #segmented = ""
 
- #detected_object_array = [] array of detected object struct ( contains all detected objects)   
+ #detected_object_array = [] array of detected object struct ( contains all detected objects)
  #name = "" object tag name
- #pose = "" 
- #truncated = "" 
- #difficult = "" 
- #xmin = ""  #ymin = "" #xmax = "" #ymax = "" box positions 
+ #pose = ""
+ #truncated = ""
+ #difficult = ""
+ #xmin = ""  #ymin = "" #xmax = "" #ymax = "" box positions
  #result_folder = "" Creates result xml i following folder with same name as image
 
  xml_annotation = ET.Element('annotation')
@@ -67,5 +67,5 @@ def create_training_xml(folder,
      
  file = ET.ElementTree(xml_annotation)
  file.write(''.join([result_folder,'/',  os.path.splitext(filename)[0],'.xml']))
- 
+
  return
